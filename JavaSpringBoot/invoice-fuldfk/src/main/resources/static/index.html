@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Kwitansi FULDFK</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+	<link rel="stylesheet" href="css/bootstrap-datepicker.standalone.css">
+
+    <!-- Custom Fonts -->
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container">
+	<div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bhoechie-tab-container">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
+              <div class="list-group">
+			    <a href="#" class="list-group-item active text-center">
+				  <h4 class="fa fa-user"></h4><br/>Info Bendahara
+			    </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4 class="fa fa-user"></h4><br/>Staff
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4 class="fa fa-user"></h4><br/>LDFK
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab">
+                <!-- flight section -->
+				<div class="bhoechie-tab-content active">
+					<div style="margin:20px 20px 20px 20px">
+						<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<label class="col-lg-4 col-md-4" for="finName">Nama Lengkap Bendahara</label>
+							<div class="col-lg-6 col-md-6 input-group">
+								<input class="form-control" type="text" id="finName"/>
+							</div>
+						</div>
+						<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<label class="col-lg-4 col-md-4" for="finNIK">NIK Bendahara</label>
+							<div class="col-lg-6 col-md-6 input-group">
+								<input class="form-control" type="text" id="finNIK"/>
+							</div>
+						</div>
+						<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<label class="col-lg-4 col-md-4" for="finCity">Kota</label>
+							<div class="col-lg-6 col-md-6 input-group">
+								<input class="form-control" type="text" id="finCity"/>
+							</div>
+						</div>
+					</div>
+				</div>
+                <div class="bhoechie-tab-content">
+                   <div>
+						<form class="form-inline" style="margin:20px 20px 20px 20px" id="staffForm">
+							<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<label class="col-lg-4 col-md-4" for="noStaff">No. Kwitansi</label>
+								<div class="col-lg-6 col-md-6 input-group">
+									<input class="form-control" type="text" id="noStaff"/>
+								</div>
+							</div>
+							<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<label class="col-lg-4 col-md-4" for="receiptFromStaff">Nama Lengkap</label>
+								<div class="col-lg-6 col-md-6 input-group">
+									<input class="form-control" type="text" id="receiptFromStaff"/>
+								</div>
+							</div>
+							<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<label class="col-lg-4 col-md-4" for="mandateStaff">Amanah</label>
+								<div class="col-lg-6 col-md-6 input-group">
+									<input class="form-control" type="text" id="mandateStaff"/>
+								</div>
+							</div>
+							<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<label class="col-lg-4 col-md-4" for="nominalStaff">Jumlah Uang</label>
+								<div class="col-lg-6 col-md-6 input-group">
+									<input class="form-control" type="text" id="nominalStaff"/>
+								</div>
+							</div>
+							<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<label class="col-lg-4 col-md-4" for="periodeStaff">Periode</label>
+								<div class="col-lg-6 col-md-6 input-group">
+									<input class="form-control" type="text" id="periodeStaff"/>
+								</div>
+							</div>
+							<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<label class="col-lg-4 col-md-4" for="dateStaff">Tanggal</label>
+								<div id="sandbox-container-staff">
+								  <div class="col-lg-6 col-md-6 input-group date ">
+								    <input type="text" class="form-control" id="dateStaff"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+								  </div>
+								</div>
+							</div>
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-left: 15px; margin-top: 10px; padding-bottom: 20px;">
+								<button type="submit" class="btn btn-primary">Cetak</button>
+							</div>
+						</form>
+					</div>
+                </div>
+                <!-- train section -->
+                <div class="bhoechie-tab-content">
+					<div>
+						<form class="form-inline" style="margin:20px 20px 20px 20px" id="ldfkForm">
+							<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<label class="col-lg-4 col-md-4" for="noLDFK">No. Kwitansi</label>
+								<div class="col-lg-6 col-md-6 input-group">
+									<input class="form-control" type="text" id="noLDFK"/>
+								</div>
+							</div>
+							<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<label class="col-lg-4 col-md-4" for="receiptFromLDFK">Nama Lengkap</label>
+								<div class="col-lg-6 col-md-6 input-group">
+									<input class="form-control" type="text" id="receiptFromLDFK"/>
+								</div>
+							</div>
+							<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<label class="col-lg-4 col-md-4" for="dewLDFK">DEW</label>
+								<div class="col-lg-6 col-md-6 input-group">
+									<input class="form-control" type="text" id="dewLDFK"/>
+								</div>
+							</div>
+							<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<label class="col-lg-4 col-md-4" for="nominalLDFK">Jumlah Uang</label>
+								<div class="col-lg-6 col-md-6 input-group">
+									<input class="form-control" type="text" id="nominalLDFK"/>
+								</div>
+							</div>
+							<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<label class="col-lg-4 col-md-4" for="periodeLDFK">Periode</label>
+								<div class="col-lg-6 col-md-6 input-group">
+									<input class="form-control" type="text" id="periodeLDFK"/>
+								</div>
+							</div>
+							<div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<label class="col-lg-4 col-md-4" for="dateLDFK">Tanggal</label>
+								<div id="sandbox-container-ldfk">
+									<div class="col-lg-6 col-md-6 input-group date ">
+										<input type="text" class="form-control" id="dateLDFK"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-left: 15px; margin-top: 10px; padding-bottom: 20px;">
+								<button type="submit" class="btn btn-primary">Cetak</button>
+							</div>
+						</form>
+					</div>
+                </div>
+            </div>
+        </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="js/bootstrap-datepicker.id.min.js" charset="UTF-8"></script>
+
+<script type="text/javascript">
+
+	$('#sandbox-container-staff input').datepicker({
+		format: "dd MM yyyy",
+		startView: 0,
+		language: "id",
+		autoclose: true,
+		todayHighlight: true
+	});
+
+    $('#sandbox-container-ldfk input').datepicker({
+        format: "dd MM yyyy",
+        startView: 0,
+        language: "id",
+        autoclose: true,
+        todayHighlight: true
+    });
+
+	$(document).ready(function() {
+	    $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+	        e.preventDefault();
+	        $(this).siblings('a.active').removeClass("active");
+	        $(this).addClass("active");
+	        var index = $(this).index();
+	        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+	        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+	    });
+
+	    var finTTD = "", finStempel = "";
+
+	    // SUBMIT FORM
+	    $("#staffForm").submit(function(event) {
+			// Prevent the form from submitting via the browser.
+			event.preventDefault();
+			if(checkFinInfo()){
+                doPostStaff();
+			}
+		});
+
+        $("#ldfkForm").submit(function(event) {
+            // Prevent the form from submitting via the browser.
+            event.preventDefault();
+            if(checkFinInfo()){
+                doPostLDFK();
+			}
+        });
+
+	    function doPostStaff(){
+	    	
+	    	// PREPARE FORM DATA
+	    	var formData = {
+	    		no 			: $("#noStaff").val(),
+	    		receiptFrom : $("#receiptFromStaff").val(),
+	    		mandate		: $("#mandateStaff").val(),
+	    		nominal		: $("#nominalStaff").val(),
+	    		date 		: $("#dateStaff").val(),
+				periode		: $("#periodeStaff").val(),
+				finName		: $("#finName").val(),
+				finNIK		: $("#finNIK").val(),
+				city		: $("#finCity").val(),
+	    	}
+	    	
+	    	// DO POST
+	  //   	$.ajax({
+			// 	type : "POST",
+			// 	cache: false,
+			// 	contentType : "application/json",
+			// 	url: "/api/report/pdf",
+			// 	data : JSON.stringify(formData),
+			// 	dataType : 'json',
+			// }).done(function (data) 
+			// { 	console.log("AYAAAAM");
+   //  		});
+	    	
+	    	var xhr = new XMLHttpRequest();
+			xhr.open('POST', "/api/report/pdf/staff", true);
+			xhr.responseType = 'arraybuffer';
+			xhr.onload = function () {
+			    if (this.status === 200) {
+			        var filename = "";
+			        var disposition = xhr.getResponseHeader('Content-Disposition');
+			        if (disposition && disposition.indexOf('attachment') !== -1) {
+			            var filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+			            var matches = filenameRegex.exec(disposition);
+			            if (matches != null && matches[1]) filename = matches[1].replace(/['"]/g, '');
+			        }
+			        var type = xhr.getResponseHeader('Content-Type');
+
+			        var blob = typeof File === 'function'
+			            ? new File([this.response], filename, { type: type })
+			            : new Blob([this.response], { type: type });
+			        if (typeof window.navigator.msSaveBlob !== 'undefined') {
+			            // IE workaround for "HTML7007: One or more blob URLs were revoked by closing the blob for which they were created. These URLs will no longer resolve as the data backing the URL has been freed."
+			            window.navigator.msSaveBlob(blob, filename);
+			        } else {
+			            var URL = window.URL || window.webkitURL;
+			            var downloadUrl = URL.createObjectURL(blob);
+
+			            if (filename) {
+			                // use HTML5 a[download] attribute to specify filename
+			                var a = document.createElement("a");
+			                // safari doesn't support this yet
+			                if (typeof a.download === 'undefined') {
+			                    window.location = downloadUrl;
+			                } else {
+			                    a.href = downloadUrl;
+			                    a.download = filename;
+			                    document.body.appendChild(a);
+			                    a.click();
+			                }
+			            } else {
+			                window.location = downloadUrl;
+			            }
+
+			            setTimeout(function () { URL.revokeObjectURL(downloadUrl); }, 100); // cleanup
+			        }
+			    }
+			};
+			xhr.setRequestHeader('Content-type', "application/json;charset=UTF-8");
+			xhr.send(JSON.stringify(formData));
+	    	// Reset FormData after Posting
+	    	resetData();
+	 
+	    }
+
+        function doPostLDFK(){
+
+            // PREPARE FORM DATA
+            var formData = {
+                no 			: $("#noLDFK").val(),
+                receiptFrom : $("#receiptFromLDFK").val(),
+                dew			: $("#dewLDFK").val(),
+                nominal		: $("#nominalLDFK").val(),
+                date 		: $("#dateLDFK").val(),
+                periode		: $("#periodeLDFK").val(),
+                finName		: $("#finName").val(),
+                finNIK		: $("#finNIK").val(),
+				city		: $("#finCity").val(),
+            }
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', "/api/report/pdf/ldfk", true);
+            xhr.responseType = 'arraybuffer';
+            xhr.onload = function () {
+                if (this.status === 200) {
+                    var filename = "";
+                    var disposition = xhr.getResponseHeader('Content-Disposition');
+                    if (disposition && disposition.indexOf('attachment') !== -1) {
+                        var filenameRegex = /filename[^;=\n]*=((['"]).*?\2|[^;\n]*)/;
+                        var matches = filenameRegex.exec(disposition);
+                        if (matches != null && matches[1]) filename = matches[1].replace(/['"]/g, '');
+                    }
+                    var type = xhr.getResponseHeader('Content-Type');
+
+                    var blob = typeof File === 'function'
+                        ? new File([this.response], filename, { type: type })
+                        : new Blob([this.response], { type: type });
+                    if (typeof window.navigator.msSaveBlob !== 'undefined') {
+                        // IE workaround for "HTML7007: One or more blob URLs were revoked by closing the blob for which they were created. These URLs will no longer resolve as the data backing the URL has been freed."
+                        window.navigator.msSaveBlob(blob, filename);
+                    } else {
+                        var URL = window.URL || window.webkitURL;
+                        var downloadUrl = URL.createObjectURL(blob);
+
+                        if (filename) {
+                            // use HTML5 a[download] attribute to specify filename
+                            var a = document.createElement("a");
+                            // safari doesn't support this yet
+                            if (typeof a.download === 'undefined') {
+                                window.location = downloadUrl;
+                            } else {
+                                a.href = downloadUrl;
+                                a.download = filename;
+                                document.body.appendChild(a);
+                                a.click();
+                            }
+                        } else {
+                            window.location = downloadUrl;
+                        }
+
+                        setTimeout(function () { URL.revokeObjectURL(downloadUrl); }, 100); // cleanup
+                    }
+                }
+            };
+            xhr.setRequestHeader('Content-type', "application/json;charset=UTF-8");
+            xhr.send(JSON.stringify(formData));
+            // Reset FormData after Posting
+            resetData();
+
+        }
+        
+        function checkFinInfo() {
+            if (!$("#finName").val().match(/\S/)
+				&& !$("#finNIK").val().match(/\S/)
+				&& !$("#finCity").val().match(/\S/))
+            {
+                alert("Informasi Bendahara Masih Kosong");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+			
+        }
+
+	    function resetData(){
+	    	$("#noStaff").val("");
+	    	$("#receiptFromStaff").val("");
+	    	$("#mandateStaff").val("");
+	    	$("#nominalStaff").val("");
+	    	$("#dateStaff").val("");
+            $("#periodeStaff").val("");
+
+            $("#noLDFK").val("");
+            $("#receiptFromLDFK").val("");
+            $("#dewLDFK").val("");
+            $("#nominalLDFK").val("");
+            $("#dateLDFK").val("");
+            $("#periodeLDFK").val("");
+	    }
+	});
+
+
+</script>
+
+</body>
+</html>

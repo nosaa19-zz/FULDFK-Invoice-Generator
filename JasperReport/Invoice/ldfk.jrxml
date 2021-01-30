@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="staff" pageWidth="802" pageHeight="390" orientation="Landscape" columnWidth="802" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="2e6b0986-3203-4183-8831-1d8fe4e127d4">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="no" class="java.lang.String"/>
+	<parameter name="receiptFrom" class="java.lang.String"/>
+	<parameter name="nominal" class="java.lang.String"/>
+	<parameter name="nominalWords" class="java.lang.String"/>
+	<parameter name="dew" class="java.lang.String"/>
+	<parameter name="background" class="java.lang.String"/>
+	<parameter name="ttd" class="java.lang.String"/>
+	<parameter name="stempel" class="java.lang.String"/>
+	<parameter name="finName" class="java.lang.String"/>
+	<parameter name="finNIK" class="java.lang.String"/>
+	<parameter name="periode" class="java.lang.String"/>
+	<parameter name="cityAndDate" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band height="390" splitType="Stretch">
+			<image>
+				<reportElement mode="Transparent" x="0" y="0" width="802" height="390" uuid="79e81813-3e5e-43ea-be97-c3ff06eb2bb0"/>
+				<imageExpression><![CDATA[$P{background}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="40" y="30" width="30" height="30" uuid="29fb0f99-5c50-43f7-82bf-4f6aee4527e8"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="60" width="170" height="30" uuid="57df27be-1a9c-40e2-826b-8365088218fb"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Telah terima dari 	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="90" width="170" height="30" uuid="f2b9b5db-5e82-4fa5-b975-495d08aa7483"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[DEW				:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="120" width="170" height="30" uuid="9a8439b6-b1fd-4906-be27-53a1cb93540d"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Uang Sejumlah		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="180" width="380" height="30" uuid="be2940da-2550-47e9-a078-87036978728e"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Untuk Pembayaran KAS FULDFK Indonesia Periode ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="600" y="240" width="159" height="20" uuid="90331147-59a5-45bf-8696-f1a226dcf27f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Bendahara Umum]]></text>
+			</staticText>
+			<image>
+				<reportElement x="559" y="241" width="145" height="120" uuid="71cfc0b5-b433-4897-9113-fd0b2f5ab10b"/>
+				<imageExpression><![CDATA[$P{stempel}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="600" y="250" width="149" height="109" uuid="bc8f5ac7-9459-4de7-aead-be21fe2589b3"/>
+				<imageExpression><![CDATA[$P{ttd}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="210" y="60" width="430" height="30" uuid="765268e0-979a-42f7-b516-37e5bbc5c770"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{receiptFrom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="30" width="570" height="30" uuid="40f385ba-af3c-4a69-b415-44b63c91cd7a"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="90" width="440" height="30" uuid="53b02fcf-2faa-4285-b44d-cb15bf326dfe"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dew}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="150" width="720" height="30" uuid="73c7632e-0d51-4a8b-845e-f0b098db9b5a"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nominalWords}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="230" width="210" height="30" uuid="b3b8c422-b91f-4d7a-951e-4dcb1066de38"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="18"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nominal}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="42" y="173" width="718" height="1" uuid="444ec84f-7e19-4a77-9f8f-c91b1884dc5d"/>
+			</line>
+			<textField>
+				<reportElement x="590" y="328" width="140" height="30" uuid="6f3f5676-9f6a-41c1-8ec4-06955f64c19a"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{finName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="590" y="348" width="140" height="25" uuid="3d6b9c26-83e8-4765-abc1-5d9154e17425"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{finNIK}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="180" width="100" height="30" uuid="4c81f1ef-1b6e-4950-9cc8-bf802c16bc23"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{periode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="559" y="220" width="190" height="20" uuid="75d29ea0-fc0d-40b4-b6ff-d48864af9fe1"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cityAndDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+</jasperReport>
